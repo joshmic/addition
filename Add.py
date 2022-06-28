@@ -1,6 +1,8 @@
+from optparse import Values
 from flask import Flask
-import ghhops_server as hs
+from requests import request
 
+import ghhops_server as hs
 import rhino3dm
 
 # register hops app as middleware
@@ -19,6 +21,7 @@ hops = hs.Hops(app)
     outputs=[hs.HopsNumber("Sum","S","A + B")]
 )
 
+@app.route('/')
 def add(a, b):
     return a + b 
 
