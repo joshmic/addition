@@ -1,8 +1,6 @@
 from flask import Flask
-from requests import request
 
 import ghhops_server as hs
-import rhino3dm
 
 # register hops app as middleware
 app = Flask(__name__)
