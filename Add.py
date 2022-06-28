@@ -21,7 +21,7 @@ hops = hs.Hops(app)
     outputs=[hs.HopsNumber("Sum","S","A + B")]
 )
 
-@app.route('/')
+@app.route('/urlend')
 def add(a, b):
     return a + b 
 
