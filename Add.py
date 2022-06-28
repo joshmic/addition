@@ -10,7 +10,7 @@ hops = hs.Hops(app)
     "/add",
     name="Add",
     description="Adding two numbers together",
-    icon="add.png",
+    #icon="add.png",
     inputs=[
         hs.HopsNumber("A","A","First number"),
         hs.HopsNumber("B","B","Second number"),
