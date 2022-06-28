@@ -1,5 +1,4 @@
 from flask import Flask
-from numpy import sctypeDict
 from requests import request
 
 import ghhops_server as hs
