@@ -1,4 +1,5 @@
 from flask import Flask
+import requests
 
 import ghhops_server as hs
 
@@ -6,11 +7,13 @@ import ghhops_server as hs
 app = Flask(__name__)
 hops = hs.Hops(app)
 
+r = requests.get('https://www.clipartmax.com/png/full/79-791760_plus-addition-sign-circle-vector-1-icon-png.png')
+
 @hops.component(
     "/add",
     name="Add",
     description="Adding two numbers together",
-    #icon="add.png",
+    icon=r,
     inputs=[
         hs.HopsNumber("A","A","First number"),
         hs.HopsNumber("B","B","Second number"),
