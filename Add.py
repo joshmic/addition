@@ -23,10 +23,7 @@ hops = hs.Hops(app)
 
 @app.route('/urlend')
 def np_add(a, b):
-
-    NumA = np.array(a)
-    NumB = np.array(b)
-
+    
     result = np.add(a,b)
     return result
 
