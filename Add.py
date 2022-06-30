@@ -2,7 +2,6 @@ from flask import Flask
 import numpy as np
 
 import ghhops_server as hs
-from pandas import array
 
 # register hops app as middleware
 app = Flask(__name__)
