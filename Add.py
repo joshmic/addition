@@ -3,7 +3,6 @@ import numpy as np
 
 import ghhops_server as hs
 
-
 # register hops app as middleware
 app = Flask(__name__)
 hops = hs.Hops(app)
@@ -24,7 +23,7 @@ hops = hs.Hops(app)
 @app.route('/urlend')
 def np_add(a, b):
     
-    result = np.add(a,b)
+    result = np.sum(a,b)
     return result
 
 
