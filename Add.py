@@ -1,5 +1,4 @@
 from flask import Flask
-import numpy as np
 
 import ghhops_server as hs
 
@@ -9,8 +8,8 @@ hops = hs.Hops(app)
 
 
 @hops.component(
-    "/np_add",
-    name="np_add",
+    "/add",
+    name="Add",
     description="Adding two numbers together",
     #icon="add.png",
     inputs=[
@@ -21,13 +20,8 @@ hops = hs.Hops(app)
 )
 
 @app.route('/urlend')
-def np_add(a, b):
-
-    arr = np.array(a,b)
-
-    result = np.add(arr)
-    return result
-
+def add(a,b):
+    return a+b
 
 if __name__ == "__main__":
     app.run()
