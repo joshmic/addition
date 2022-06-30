@@ -24,7 +24,8 @@ hops = hs.Hops(app)
 def np_add(a, b):
 
     arr = np.array(a,b)
-    result = np.sum(arr)
+
+    result = np.add(arr)
     return result
 
 
